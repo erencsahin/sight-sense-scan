@@ -1,6 +1,5 @@
-
 import { useQuery } from '@tanstack/react-query';
-import api from '../services/api';
+import api, { getResults } from '../services/api';
 import { ResultsResponse } from '../types';
 
 const useResults = (jobId: string | null, enabled: boolean = false) => {
@@ -8,7 +7,7 @@ const useResults = (jobId: string | null, enabled: boolean = false) => {
     queryKey: ['results', jobId],
     queryFn: () => {
       if (!jobId) throw new Error('No job ID provided');
-      return api.getResults(jobId);
+      return getResults(jobId);
     },
     enabled: !!jobId && enabled,
     refetchInterval: (query) => {

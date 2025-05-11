@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { DetectionResult } from '../types';
-import ResultCard from './ResultCard';
+import ResultCard from './ui/ResultCard';
 import LoadingIndicator from './LoadingIndicator';
 import ErrorBanner from './ErrorBanner';
 

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { DetectionResult } from '../types';
+import { DetectionResult } from '../../types';
 
 interface ResultCardProps {
   result: DetectionResult;
